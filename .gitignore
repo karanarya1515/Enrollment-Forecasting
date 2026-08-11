@@ -1,0 +1,66 @@
+# =============================================================================
+# .gitignore — Clinical Trial Enrollment Forecasting
+# =============================================================================
+# This project is built on confidential company data. Nothing derived from
+# that data may enter version control. When in doubt, add it here.
+# =============================================================================
+
+# --- Confidential data (NEVER COMMIT) ----------------------------------------
+data/
+outputs/
+*.csv
+*.parquet
+*.xlsx
+*.xls
+
+# --- Internal database queries -----------------------------------------------
+# Excluded: these expose the proprietary source schema.
+sql/
+
+# --- Trained model artifacts -------------------------------------------------
+# Derived from confidential data and regenerable via train_model.py.
+models/
+
+# --- Logs --------------------------------------------------------------------
+logs/
+*.log
+
+# --- Credentials and secrets -------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+credentials/
+secrets.json
+config.local.py
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Virtual environments ----------------------------------------------------
+venv/
+env/
+ENV/
+.venv/
+virtualenv/
+
+# --- IDE / editor ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
